@@ -1,0 +1,13 @@
+73eeea206672cf4f5c32ac7b7b036522 *DESCRIPTION
+5622c188a1873b61ee8939b0566f32f6 *LICENSE
+6e4a3da78171011cff33915d4d282289 *NAMESPACE
+9695c014988a181eb890389168ea7c8b *R/GetFitDataset.R
+efaef3b848d1556e6980433e85b229e5 *R/GetFitDatasource.R
+8833f54ecc1752bf0ba5948215739db4 *R/GetFitDatasources.R
+5ddfdc90405010e809f4a58a4d1f5c50 *R/RGoogleFit-package.R
+190aed71535c2682c6ea357ad2cf0c4c *R/Utils.R
+8fea2e102e2898cddc11ae81f7d46cc2 *man/GetFitDataset.Rd
+14b55c4e4b086df63ad562cdf31f45fc *man/GetFitDatasource.Rd
+2b55204800d1df7037b251311976169e *man/GetFitDatasources.Rd
+ebe2480f3991602ea4163b34673d402b *man/NanosToPOSIXct.Rd
+ff13acfdaaefc5ccfe823ab77832d6df *man/RGoogleFit-package.Rd
