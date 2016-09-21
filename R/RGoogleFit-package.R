@@ -8,6 +8,6 @@
 #'
 #' @name RGoogleFit-package
 #' @docType package
-#' @import RCurl jsonlite bit64
+#' @import RCurl jsonlite bit64 httr
 #' @importFrom utils URLencode
 invisible(NULL)

@@ -1,0 +1,9 @@
+RGoogleFit 0.2.0
+----------------------------------------------------------------
+
+* new function GetFitOauth2Token to simplify OAuth2 authentication
+
+RGoogleFit 0.1.0
+----------------------------------------------------------------
+
+* initial release
