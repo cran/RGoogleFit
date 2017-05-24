@@ -12,4 +12,3 @@ GetFitDatasources(token)
 \description{
 \code{GetFitDatasources} returns a dataframe with user's datasources.
 }
-

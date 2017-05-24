@@ -2,8 +2,10 @@
 #' @rdname GetFitOauth2Token
 #' @description
 #' Retrieves or refreshes an OAuth2 token. Two options must be set:
-#' \code{RGoogleFit.client_id}
-#' \code{RGoogleFit.client_secret}
+#' \itemize{
+#' \item \code{RGoogleFit.client_id}
+#' \item \code{RGoogleFit.client_secret}
+#' }
 #' @export
 GetFitOauth2Token <- function() {
   client_id = getOption('RGoogleFit.client_id')
@@ -14,7 +16,8 @@ GetFitOauth2Token <- function() {
   assert(!is.null(client_secret),
          'Please set \'RGoogleFit.client_secret\' option')
   
-  oauth2_token <- get0('RGoogleFit.token')
+  oauth2_token <- RGoogleFitObjects$oauth2_object
+  print(oauth2_token)
   
   if (!is.null(oauth2_token)) {
     if (!oauth2_token$validate()) {
@@ -38,10 +41,24 @@ GetFitOauth2Token <- function() {
       use_oob = FALSE,
       cache = TRUE
     )
+    if (!oauth2_token$validate()) {
+      oauth2_token$refresh()
+    }
   }
   
-  assign('RGoogleFit.token', oauth2_token)
-  
+  RGoogleFitObjects$oauth2_object <- oauth2_token
+
   return(oauth2_token$credentials$access_token)
+  
+}
+
+#' @title GetFitOauth2Object
+#' @rdname GetFitOauth2Object
+#' @description
+#' Returns the whole Oauth2 object. Useful for debugging purposes.
+#' @export
+GetFitOauth2Object <- function() {
+
+  return(RGoogleFitObjects$oauth2_object)
   
 }

@@ -8,7 +8,8 @@ GetFitOauth2Token()
 }
 \description{
 Retrieves or refreshes an OAuth2 token. Two options must be set:
-\code{RGoogleFit.client_id}
-\code{RGoogleFit.client_secret}
+\itemize{
+\item \code{RGoogleFit.client_id}
+\item \code{RGoogleFit.client_secret}
 }
-
+}

@@ -15,4 +15,3 @@ Converts nanoseconds from epoch (as provided by Google Fit) to POSIXct
 \examples{
 NanosToPOSIXct(1388534400000000000)
 }
-

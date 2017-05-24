@@ -15,4 +15,3 @@ GetFitDatasource(token, datasource)
 Returns a list with datasource attributes.
 Refer to \url{https://developers.google.com/fit/rest/v1/data-types} for full documentation.
 }
-

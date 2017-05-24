@@ -20,4 +20,3 @@ Retrieves a dataset for a given \code{datasource} and time range defined by
 \code{startTime} and \code{endTime}.
 Refer to \url{https://developers.google.com/fit/rest/v1/datasets} for full documentation.
 }
-

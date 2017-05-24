@@ -11,3 +11,5 @@
 #' @import RCurl jsonlite bit64 httr
 #' @importFrom utils URLencode
 invisible(NULL)
+
+RGoogleFitObjects <- new.env()
