@@ -17,7 +17,6 @@ GetFitOauth2Token <- function() {
          'Please set \'RGoogleFit.client_secret\' option')
   
   oauth2_token <- RGoogleFitObjects$oauth2_object
-  print(oauth2_token)
   
   if (!is.null(oauth2_token)) {
     if (!oauth2_token$validate()) {
@@ -38,7 +37,7 @@ GetFitOauth2Token <- function() {
         "https://www.googleapis.com/auth/fitness.activity.read",
         "https://www.googleapis.com/auth/fitness.location.read"
       ) ,
-      use_oob = FALSE,
+      use_oob = TRUE,
       cache = TRUE
     )
     if (!oauth2_token$validate()) {
