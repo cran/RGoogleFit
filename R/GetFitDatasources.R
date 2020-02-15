@@ -6,8 +6,8 @@
 #' @param token - OAuth 2.0 access token
 
 GetFitDatasources <- function(token) {
-
-  return (fromJSON(getURL("https://www.googleapis.com/fitness/v1/users/me/dataSources",
-                 httpheader = FitHTTPHeader(token)))[[1]])
-
+    
+    return(fromJSON(getURL("https://www.googleapis.com/fitness/v1/users/me/dataSources", 
+        httpheader = FitHTTPHeader(token)))[[1]])
+    
 }

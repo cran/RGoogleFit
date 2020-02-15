@@ -8,32 +8,24 @@
 #' @description
 #' Retrieves a dataset for a given \code{datasource} and time range defined by
 #' \code{startTime} and \code{endTime}.
-#' Refer to \url{https://developers.google.com/fit/rest/v1/datasets} for full documentation.
+#' Refer to \url{https://developers.google.com/fit/rest/v1/datasets}
+#' for full documentation.
 
 GetFitDataset <- function(token, datasource, startTime, endTime) {
-
-  ValidateDateRange(startTime,endTime)
-  ValidateDatasource(datasource)
-
-  fitStartTS <- EpochTime(startTime)
-  fitEndTS <- EpochTime(endTime)
-
-  url <-
-    paste(
-      "https://www.googleapis.com/fitness/v1/users/me/dataSources/",
-      datasource,
-      "/datasets/",
-      fitStartTS,
-      "-",
-      fitEndTS,
-      sep = ""
-    )
-
-  url <- URLencode(url)
-  
-  print(paste("Requested URL:",url))
-  
-  return (fromJSON(getURL(url,
-                          httpheader = FitHTTPHeader(token))))
-
+    
+    ValidateDateRange(startTime, endTime)
+    ValidateDatasource(datasource)
+    
+    fitStartTS <- EpochTime(startTime)
+    fitEndTS <- EpochTime(endTime)
+    
+    url <- paste0("https://www.googleapis.com/fitness/v1/users/me/dataSources/", 
+        datasource, "/datasets/", fitStartTS, "-", fitEndTS)
+    
+    url <- URLencode(url)
+    
+    print(paste("Requested URL:", url))
+    
+    return(fromJSON(getURL(url, httpheader = FitHTTPHeader(token))))
+    
 }

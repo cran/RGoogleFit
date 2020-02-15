@@ -1,6 +1,12 @@
 RGoogleFit 0.3.1
 ----------------------------------------------------------------
 
+* add OAuth2 scopes
+* reformat code
+
+RGoogleFit 0.3.1
+----------------------------------------------------------------
+
 * minor changes to OAuth2 functions
 
 RGoogleFit 0.3.0
